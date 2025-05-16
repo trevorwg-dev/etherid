@@ -3,89 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EtherID | dApp</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EtherID</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header class="card">
+    <header>
         <span class="title">EtherID</span>
-        <span class="setup">
-            <span class="chain">
-                <svg class="eth" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 320 512">
-                    <path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z" fill="white"/>
-                </svg>
-                Ethereum
-            </span>
-            <button class="wallet" type="button">Connect Wallet</button>
-        </span>
+        <button class="wallet button" type="button">Connect Wallet</button>
     </header>
     <main>
-        <span class="card domain">
-
-
-            <h2>Register Domain</h2>
-            <form id="domainForm">
-                <div class="form-group">
-                    <label for="domainName">Domain Name</label>
-                    <input type="text" id="domainName" placeholder="Enter domain name">
-                    <span class="domain-suffix">.eid</span>
-                </div>
-                <button type="submit" class="register-btn">Check Availability</button>
-                <div id="domainStatus"></div>
-            </form>
-            <style>
-                .domain h2 {
-                    text-align: center;
-                    margin-bottom: 20px;
-                }
-                .form-group {
-                    margin-bottom: 15px;
-                    position: relative;
-                }
-                .form-group label {
-                    display: block;
-                    margin-bottom: 5px;
-                }
-                .form-group input {
-                    width: 100%;
-                    padding: 8px;
-                    border-radius: 4px;
-                    border: 1px solid #ccc;
-                    box-sizing: border-box;
-                }
-                .domain-suffix {
-                    position: absolute;
-                    right: 10px;
-                    top: 33px;
-                    color: #666;
-                }
-                .register-btn {
-                    width: 100%;
-                    padding: 10px;
-                    background-color: #4DA2FF;
-                    color: white;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    margin-top: 10px;
-                    transition: background 0.1s ease-in;
-                }
-                .register-btn:hover {
-                    background-color: #2B8AFF;
-                }
-                #domainStatus {
-                    margin-top: 15px;
-                    text-align: center;
-                    font-size: 14px;
-                }
-            </style>
-
-
-        </span>
-        <span class="card payment">
-            Pay Tx
-        </span>
+        <div class="domain-container card">
+            <div class="subtitle">Choose domain name</div>
+            <div style="position: relative;">
+                <input class="inputbox" id="domain-name" type="text" placeholder="mydomain">
+                <span class="hook">.eid</span>
+            </div>
+            <div class="subtitle">Link wallet address</div>
+            <div style="position: relative;">
+                <input class="inputbox" id="domain-wallet" type="text" placeholder="0x">
+                <button class="addressLoader hook" type="button">wallet</button>
+            </div>
+            <button class="register button" type="button">Register Domain</button>
+        </div>
+        <div class="payment-container card">
+            Payment Content
+        </div>
     </main>
-    <script src="script.js" type="module"></script>
+    <!-- <script src="src/script.js" type="module"></script> -->
+    <script src="src/wallet.js" type="module"></script>
 </body>
 </html>

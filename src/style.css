@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+@keyframes breathe {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+html {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-size: medium;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    margin: 0 20%;
+    background: linear-gradient(-45deg, #F7FBFF, #DEEBF7);
+    background-size: 400%, 400%;
+    animation: breathe 4s ease infinite;
+}
+
+header {
+    height: 40px;
+    margin: 4% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+}
+
+.wallet {
+    width: 140px;
+}
+
+main {
+    height: 60%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.domain-container {
+    height: fit-content;
+    width: 45%;
+}
+
+.addressLoader {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.addressLoader:hover {
+    color: #0099F2;
+}
+
+.register {
+    height: 32px;
+    width: 44%;
+    margin: 4% 28%;
+}
+
+.payment-container {
+    width: 55%;
+    margin-left: 32px;
+}
+
+.button {
+    border: 0;
+    border-radius: 8px;
+    background-color: #00A3FF;
+    font-size: medium;
+    color: white;
+}
+
+.button:not(.connected):hover {
+    background-color: #0099F2;
+    cursor: pointer;
+}
+
+.card {
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px);
+}
+
+.subtitle {
+    margin-top: 4%;
+    font-size: large;
+}
+
+.inputbox {
+    height: 32px;
+    width: 100%;
+    padding-left: 16px;
+    margin: 2% 0;
+    border: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    font-size: medium;
+    outline: none;
+}
+
+.inputbox:focus {
+    box-shadow: 0 0 2px 2px rgba(0, 153, 242, 0.3);
+}
+
+.hook {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: small;
+}
