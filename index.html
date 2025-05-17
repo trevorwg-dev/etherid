@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EtherID</title>
+    <title>Ether ID</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <button class="wallet button" type="button">Connect Wallet</button>
     </header>
     <main>
-        <div class="domain-container card">
+        <div class="domain-session card">
             <div class="subtitle">Choose domain name</div>
             <div style="position: relative;">
                 <input class="inputbox" id="domain-name" type="text" placeholder="mydomain">
@@ -21,15 +21,24 @@
             <div class="subtitle">Link wallet address</div>
             <div style="position: relative;">
                 <input class="inputbox" id="domain-wallet" type="text" placeholder="0x">
-                <button class="addressLoader hook" type="button">wallet</button>
+                <button class="copyWallet hook" type="button">wallet</button>
             </div>
             <button class="register button" type="button">Register Domain</button>
         </div>
-        <div class="payment-container card">
-            Payment Content
+        <div class="payment-session card">
+            <div class="subtitle">To</div>
+            <input class="inputbox" id="payment-target" type="text" placeholder="wallet address or EtherID domain">
+            <div class="subtitle">Transfer amount</div>
+            <div style="position: relative;">
+                <input class="inputbox" id="payment-amount" type="text">
+                <span class="hook">ether</span>
+            </div>
+            <button class="transfer register button" type="button">Transfer</button>
         </div>
     </main>
-    <!-- <script src="src/script.js" type="module"></script> -->
-    <script src="src/wallet.js" type="module"></script>
+    <div class="some-session card">
+        SOME SESSION
+    </div>
+    <script type="module" src="src/wallet.js"></script>
 </body>
 </html>

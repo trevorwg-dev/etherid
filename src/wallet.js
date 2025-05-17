@@ -1,41 +1,52 @@
 import { ethers } from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.min.js";
 
+// Contract
+
+// Helper Functions
 const hasWalletProvider = () => window.ethereum ? true : false;
 
-const walletElement = document.querySelector(".wallet");
-const addressLoaderElement = document.querySelector(".addressLoader");
-const domainAddressElement = document.querySelector("#domain-wallet");
+function truncatedAddress(address) {
+    return "0x" + address.slice(2, 6).toUpperCase() + "..." + address.slice(-4).toUpperCase();
+}
 
-walletElement.addEventListener("click", connectWallet);
-addressLoaderElement.addEventListener("click", loadAddress);
+// HTML Elements
+const walletButton = document.querySelector(".wallet");
+const copyWalletButton = document.querySelector(".copyWallet");
+const domainWalletInput = document.querySelector("#domain-wallet");
+
+// Events
+walletButton.addEventListener("click", connectWallet);
+copyWalletButton.addEventListener("click", getWallet);
+
 window.onload = (e) => {
     syncWallet();
 }
 
+window.ethereum.on("accountsChanged", () => {
+    window.location.reload();
+})
+
+// Event Handlers
 async function syncWallet() {
     if (!hasWalletProvider()) return;
-    const accounts = await ethereum.request({method : "eth_accounts"});
+    const accounts = await ethereum.request({method: "eth_accounts"});
     if (accounts.length > 0) {
-        walletElement.innerHTML = truncatedAddress(accounts[0]);
-        walletElement.disabled = true;
-        walletElement.classList.add("connected");
+        walletButton.innerHTML = truncatedAddress(accounts[0]);
+        walletButton.disabled = true;
+        walletButton.classList.add("connected");
     }
 }
 
 async function connectWallet() {
     if (!hasWalletProvider()) return;
     await ethereum.request({method: "eth_requestAccounts"});
-    syncWallet();
+    syncWallet();   
 }
 
-async function loadAddress() {
+async function getWallet() {
     if (!hasWalletProvider()) return;
-    const accounts = await ethereum.request({method : "eth_accounts"});
+    const accounts = await ethereum.request({method: "eth_accounts"});
     if (accounts.length > 0) {
-        domainAddressElement.value = accounts[0];
+        domainWalletInput.value = accounts[0];
     }
-}
-
-function truncatedAddress(address) {
-    return "0x" + address.slice(2, 6).toUpperCase() + "..." + address.slice(-4).toUpperCase();
 }

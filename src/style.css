@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
-@keyframes breathe {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+:root {
+    --primary-accent: #00A3FF;
+    --second-accent: #0097ED;
+    --background: #D6EDFF;
+    --primary-text: #1F1F1F;
+    --second-text: #636363;
 }
 
 html {
@@ -16,9 +18,7 @@ html {
 body {
     height: 100vh;
     margin: 0 20%;
-    background: linear-gradient(-45deg, #F7FBFF, #DEEBF7);
-    background-size: 400%, 400%;
-    animation: breathe 4s ease infinite;
+    background: linear-gradient(to bottom, var(--background), transparent);
 }
 
 header {
@@ -29,69 +29,69 @@ header {
 }
 
 .title {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: x-large;
 }
 
-.wallet {
-    width: 140px;
-}
-
 main {
-    height: 60%;
-    margin-top: 120px;
     display: flex;
     justify-content: center;
 }
 
-.domain-container {
+.domain-session {
     height: fit-content;
-    width: 45%;
+    width: 50%;
 }
 
-.addressLoader {
+.copyWallet {
     padding: 0;
     border: 0;
-    background-color: transparent;
     text-decoration: underline;
+    background-color: transparent;
 }
 
-.addressLoader:hover {
-    color: #0099F2;
+.copyWallet:hover {
+    color: var(--primary-accent);
 }
 
 .register {
-    height: 32px;
-    width: 44%;
-    margin: 4% 28%;
+    height: 40px;
+    width: 40%;
+    margin: 4% 30%;
 }
 
-.payment-container {
-    width: 55%;
-    margin-left: 32px;
+.payment-session {
+    height: fit-content;
+    width: 50%;
+    margin-left: 16px;
+}
+
+.some-session {
+    height: fit-content;
+    margin-top: 16px;
 }
 
 .button {
+    padding: 0 16px;
     border: 0;
     border-radius: 8px;
-    background-color: #00A3FF;
     font-size: medium;
     color: white;
+    background-color: var(--primary-accent);
 }
 
 .button:not(.connected):hover {
-    background-color: #0099F2;
     cursor: pointer;
+    background-color: var(--second-accent);
 }
 
 .card {
     padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(16px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .subtitle {
@@ -103,17 +103,17 @@ main {
     height: 32px;
     width: 100%;
     padding-left: 16px;
-    margin: 2% 0;
     border: 0;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.6);
+    margin: 2% 0;
     box-sizing: border-box;
-    font-size: medium;
     outline: none;
+    font-size: medium;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .inputbox:focus {
-    box-shadow: 0 0 2px 2px rgba(0, 153, 242, 0.3);
+    box-shadow: 0 0 2px 2px #AED7FB;
 }
 
 .hook {
