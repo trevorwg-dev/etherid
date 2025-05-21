@@ -23,22 +23,57 @@
                 <input class="inputbox" id="domain-wallet" type="text" placeholder="0x">
                 <button class="copyWallet hook" type="button">wallet</button>
             </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin: 4% 0 2% 0; padding-right: 2%;">
+                <span>Registration Fee</span>
+                <div style="display: flex; align-items: center;">
+                    <svg class="eth-icon" width="20" height="20" viewBox="0 0 256 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#8C8C8C" points="127.9,0 125.6,7.7 125.6,285.9 127.9,288.2 255.8,209.2"/>
+                        <polygon fill="#343434" points="127.9,0 0,209.2 127.9,288.2 127.9,154.1"/>
+                        <polygon fill="#3C3C3B" points="127.9,312.6 126.6,314.2 126.6,413.6 127.9,416.9 255.9,233.7"/>
+                        <polygon fill="#8C8C8C" points="127.9,416.9 127.9,312.6 0,233.7"/>
+                        <polygon fill="#141414" points="127.9,288.2 255.8,209.2 127.9,154.1"/>
+                        <polygon fill="#393939" points="0,209.2 127.9,288.2 127.9,154.1"/>
+                    </svg>
+                    <span class="register-fees">- ether</span>
+                </div>
+            </div>
             <button class="register button" type="button">Register Domain</button>
         </div>
         <div class="payment-session card">
             <div class="subtitle">To</div>
-            <input class="inputbox" id="payment-target" type="text" placeholder="wallet address or EtherID domain">
+            <div style="position: relative;">
+                <input class="inputbox" id="payment-target" type="text" placeholder="wallet address or EtherID domain">
+                <span class="hook">.eid</span>
+            </div>
             <div class="subtitle">Transfer amount</div>
             <div style="position: relative;">
                 <input class="inputbox" id="payment-amount" type="text">
                 <span class="hook">ether</span>
             </div>
-            <button class="transfer register button" type="button">Transfer</button>
+            <button class="transfer button" type="button">Transfer</button>
         </div>
     </main>
-    <div class="some-session card">
-        SOME SESSION
+    <div class="admin-session card">
+        <div class="subtitle" style="width: 20%; margin: 0 auto; margin-top: 2%; text-align: center;">Admin Panel</div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+            
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div style="white-space: nowrap;">Withdraw Registration Fees</div>
+            <button class="withdraw button" type="button" >Withdraw Fees</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="white-space: nowrap;">Delete Domain</div>
+            <div style="width: 40%; position: relative;">
+                <input class="inputbox" id="delete-name" type="text" placeholder="deleteDomain">
+                <span class="hook">.eid</span>
+            </div>
+            <button class="delete button" type="button">Delete Domain</button>
+        </div>
     </div>
-    <script type="module" src="src/wallet.js"></script>
+    <script type="module" src="src/dapp.js"></script>
 </body>
 </html>
