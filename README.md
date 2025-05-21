@@ -1,9 +1,5 @@
 # EtherID - Decentralized DNS for Ethereum Wallets
 
-<!-- # etherid
-This is a project for COMP4541. A decentralized application (dApp) for providing DNS services for Ethereum 
-wallets. -->
-
 ## Project Overview
 EtherID is a decentralized application (dApp) that provides DNS-like services for Ethereum wallets. It allows users to register human-readable domain names that map to Ethereum addresses, making it easier to send and receive cryptocurrency without dealing with long, complex addresses.
 
@@ -24,12 +20,10 @@ EtherID is a decentralized application (dApp) that provides DNS-like services fo
 ```
 etherid/
 ├── contracts/
-│   ├── EtherID.sol         # Main smart contract
-│   └── old_EtherID.sol     # Previous version
+│   └── EtherID.sol         # Main smart contract
 ├── src/
 │   ├── dapp.js            # Frontend application logic
-│   ├── style.css          # Styling
-│   └── old_wallet.js      # Previous wallet implementation
+│   └── style.css          # Styling
 └── index.html             # Main application interface
 ```
 
@@ -44,7 +38,7 @@ etherid/
 1. Clone the repository
 2. Install dependencies
 3. Deploy the smart contract to your preferred Ethereum network
-4. Update the contract address in the frontend
+4. Update the contract address in the dapp.js
 5. Run the application locally
 
 ## Security Features
@@ -58,4 +52,4 @@ etherid/
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Course Information
-This project was developed for COMP4541 - Blockchain Technology and Applications at HKUST.
+This project was developed for COMP4541.

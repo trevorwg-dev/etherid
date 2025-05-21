@@ -1,7 +1,7 @@
 import { ethers } from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.min.js";
 
 // ---------- Contract ---------- //
-const contractAddress = "0x769EA2b78a23D3aCa877B4a49e95413F63B840FC";
+const contractAddress = "0xB1bCadA08aD3C30de7c89201Ac82fA786175d265";
 const contractABI = [
     "function registerDomain(string memory domain) external payable",
     "function deleteDomain(string memory domain) external",

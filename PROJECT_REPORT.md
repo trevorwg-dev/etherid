@@ -1,5 +1,5 @@
-# EtherID Project Report
-## COMP4541 - Blockchain Technology and Applications
+# COMP4541 Project Report
+## EtherID - Decentralized DNS for Ethereum Wallets
 
 ### 1. Introduction
 EtherID is a decentralized application that implements a DNS-like system for Ethereum addresses. The project demonstrates practical applications of blockchain technology by solving the real-world problem of complex cryptocurrency addresses through human-readable domain names.
