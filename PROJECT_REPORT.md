@@ -1,4 +1,4 @@
-# COMP4541 Project Report
+# COMP4541 Project Report (Github Side)
 ## EtherID - Decentralized DNS for Ethereum Wallets
 
 ### 1. Introduction

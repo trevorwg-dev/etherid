@@ -1,5 +1,9 @@
 # EtherID - Decentralized DNS for Ethereum Wallets
 
+### Live Demo Detials
+Live demo on : https://trevorwg-dev.github.io/etherid/
+Testnet : Sepolia ETH testnet
+
 ## Project Overview
 EtherID is a decentralized application (dApp) that provides DNS-like services for Ethereum wallets. It allows users to register human-readable domain names that map to Ethereum addresses, making it easier to send and receive cryptocurrency without dealing with long, complex addresses.
 
